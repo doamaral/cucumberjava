@@ -18,7 +18,7 @@ public class Hooks {
 	
 	@After
 	public void tearDown() {
-		//if(Properties.FECHAR_BROWSER) DriverFactory.killDriver();
+		if(Properties.FECHAR_BROWSER) DriverFactory.killDriver();
 	}
 	
 	

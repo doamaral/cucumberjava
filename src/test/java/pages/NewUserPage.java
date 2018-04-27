@@ -11,5 +11,8 @@ public class NewUserPage extends BasePage {
         getDriver().findElement(By.xpath("//input[@type=\"submit\"]")).click();
         return this;
     }
+	public String getEmailFailMessage(){
+        return getDriver().findElement(By.xpath("//*[.=\"Endereço de email já utilizado\"]")).getText();
+    }
 
 }

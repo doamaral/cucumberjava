@@ -29,6 +29,7 @@ Feature: User Login
 		When I click the "Cadastrar" button
 		Then get the Successfully created user Message
 	
+	@Ready
 	Scenario: Already Existent User
 		Given I'm in the login page
 		And click the New User link

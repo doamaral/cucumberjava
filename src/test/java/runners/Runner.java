@@ -9,9 +9,9 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		plugin = "pretty",
 		features = "src/test/resources/features/user.feature",
-		tags = {"@InProgress"}, 
+		tags = {"@Ready"}, 
 		//if have more tags, separate with comma
-		//@Ready
+		//@Ready @InProgress
 		glue = "steps",
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE

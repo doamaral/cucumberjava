@@ -65,7 +65,8 @@ public class UserTest {
 
 	@Then("^get the already taken email Message$")
 	public void getTheAlreadyTakenEmailMessage() throws Throwable {
-
+		String message = newUserPage.getEmailFailMessage();
+		Assert.assertEquals("Endereço de email já utilizado", message);
 	}
 
 }
