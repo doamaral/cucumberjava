@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = "pretty",
+		plugin = {"pretty", "html:cucumberjava/src/test/resources/reports"},
 		features = "src/test/resources/features/user.feature",
 		tags = {"@Ready"}, 
 		//if have more tags, separate with comma
