@@ -1,37 +1,38 @@
 Feature: User Login 
 	As Accountant
 	I must login to the application
-	In order to keep accounts register safe
+	In order to keep accounts Cadastrar safe
 	
-	Scenario: Login Successful Test
+	@Ready
+	Scenario: Login Successful
 		Given I'm in the login page
 		And Fill the "email" field with "asdf@gmail.com"
-		And Fill the "password" field with "123456"
-		When I click the "Submit" button
+		And Fill the "senha" field with "123456"
+		When I click the "Entrar" button
 		Then I get the Successfully logged user Message
 	
 	Scenario: Wrong User Login
 		Given I'm in the login page
 		And Fill the "email" field with "asdf@gmail.com"
-		And Fill the "password" field with "123456"
-		When I click the "Submit" button
+		And Fill the "senha" field with "123456"
+		When I click the "Entrar" button
 		Then I get the wrong user message
 	
 	Scenario: Create new user
 		Given I'm in the login page
 		And click the New User link
-		And Fill the "name" field with "random name"
+		And Fill the "nome" field with "random nome"
 		And Fill the "email" field with "random email"
-		And Fill the "password" field with "123456"
-		When I click the "Register" button
+		And Fill the "senha" field with "123456"
+		When I click the "Cadastrar" button
 		Then get the Successfully created user Message
 	
 	Scenario: Already Existent User
 		Given I'm in the login page
 		And click the New User link
-		And Fill the "name" field with "Lucas"
+		And Fill the "nome" field with "Lucas"
 		And Fill the "email" field with "asdf@gmail.com"
-		And Fill the "password" field with "123456"
-		When I click the "Register" button
+		And Fill the "senha" field with "123456"
+		When I click the "Cadastrar" button
 		Then get the already taken email Message
 		
