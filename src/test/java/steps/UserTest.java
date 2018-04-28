@@ -32,7 +32,7 @@ public class UserTest {
 
 	@When("^I click the \"([^\"]*)\" button$")
 	public void iClickTheButton(String arg1) throws Throwable {
-		if (arg1.equals("Entrar")) {
+		if (arg1.equals("Entrar") || arg1.equals("Salvar")) {
 			loginPage.buttonClickByLabel(arg1);
 		}
 		if (arg1.equals("Cadastrar")) {
@@ -40,33 +40,14 @@ public class UserTest {
 		}
 	}
 
-	@Then("^I get the Successfully logged user Message$")
-	public void iGetTheSuccessfullyLoggedUserMessage() throws Throwable {
-		String message = userPage.getSuccessMessage();
-		Assert.assertEquals("Bem vindo, Lucas!", message);
-	}
-
-	@Then("^I get the wrong user message$")
-	public void iGetTheWrongUserMessage() throws Throwable {
-		String message = loginPage.getLoginFailMessage();
-		Assert.assertEquals("Problemas com o login do usuário", message);
-	}
-
 	@Given("^click the New User link$")
 	public void clickTheNewUserLink() throws Throwable {
 		loginPage.goToNewUserPage();
 	}
-
-	@Then("^get the Successfully created user Message$")
-	public void getTheSuccessfullyCreatedUserMessage() throws Throwable {
-		String message = loginPage.getSuccessMessage();
-		Assert.assertEquals("Usuário inserido com sucesso", message);
-	}
-
-	@Then("^get the already taken email Message$")
-	public void getTheAlreadyTakenEmailMessage() throws Throwable {
-		String message = newUserPage.getEmailFailMessage();
-		Assert.assertEquals("Endereço de email já utilizado", message);
+	
+	@Then("^I get the \"([^\"]*)\" message$")
+	public void iGetTheUserMessage(String arg1) throws Throwable {
+	    Assert.assertTrue(loginPage.searchForMessageText(arg1));
 	}
 
 }

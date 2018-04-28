@@ -12,7 +12,7 @@ public class NewUserPage extends BasePage {
         return this;
     }
 	public String getEmailFailMessage(){
-        return getDriver().findElement(By.xpath("//*[.=\"EndereÁo de email j· utilizado\"]")).getText();
+        return getDriver().findElement(By.xpath("//*[.=\"Endere√ßo de email j√° utilizado\"]")).getText();
     }
 
 }

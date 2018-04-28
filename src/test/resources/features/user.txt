@@ -19,7 +19,7 @@ Feature: User Login
 		When I click the "Entrar" button
 		Then I get the "Problemas com o login do usuário" message
 	
-	@Ready
+	@asd
 	Scenario: Email Required Field
 		Given I'm in the login page
 		And Fill the "email" field with ""
@@ -27,7 +27,7 @@ Feature: User Login
 		When I click the "Entrar" button
 		Then I get the "Email é um campo obrigatório" message
 	
-	@Ready
+	@asd
 	Scenario: Password Required Field
 		Given I'm in the login page
 		And Fill the "email" field with "asdf-nopass@gmail.com"

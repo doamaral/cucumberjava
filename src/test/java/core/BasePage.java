@@ -21,5 +21,10 @@ public class BasePage {
     public String getAlertMessage(){
         return getDriver().findElement(By.className("alert-warning")).getText();
     }
+	public boolean searchForMessageText(String message) {
+		boolean result = false;
+		result = message.equals(getDriver().findElement(By.xpath("//*[.='"+message+"']")).getText());
+		return result;
+	}
 
 }

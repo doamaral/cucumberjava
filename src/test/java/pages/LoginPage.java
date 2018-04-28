@@ -13,12 +13,12 @@ public class LoginPage extends BasePage{
         return this;
     }
 	public String getLoginFailMessage(){
-        //Problemas com o login do usu·rio
-        return getDriver().findElement(By.xpath("//*[.=\"Problemas com o login do usu·rio\"]")).getText();
+        //Problemas com o login do usu√°rio
+        return getDriver().findElement(By.xpath("//*[.=\"Problemas com o login do usu√°rio\"]")).getText();
     }
 	
 	public NewUserPage goToNewUserPage() {
-		getDriver().findElement(By.linkText("Novo usu·rio?")).click();
+		getDriver().findElement(By.linkText("Novo usu√°rio?")).click();
         return new NewUserPage();		
 	}
 
