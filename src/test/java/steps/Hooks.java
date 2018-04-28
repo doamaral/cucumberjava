@@ -12,8 +12,7 @@ public class Hooks {
 	
 	@Before
 	public void setUp() {
-		
-        getDriver().get("https://srbarriga.herokuapp.com/login");
+        getDriver().get("https://srbarriga.herokuapp.com");
 	}
 	
 	@After

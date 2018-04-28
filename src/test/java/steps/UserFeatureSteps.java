@@ -7,7 +7,7 @@ import pages.UserPage;
 import pages.NewUserPage;
 import org.apache.commons.lang3.RandomStringUtils;
 
-public class UserTest {
+public class UserFeatureSteps {
 	LoginPage loginPage = new LoginPage();
 	UserPage userPage = new UserPage();
 	NewUserPage newUserPage = new NewUserPage();

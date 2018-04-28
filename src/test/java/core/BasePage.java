@@ -5,10 +5,12 @@ import org.openqa.selenium.By;
 import static core.DriverFactory.getDriver;
 
 public class BasePage {
+	
     public void fillTextFieldById(String id, String value){
         getDriver().findElement(By.id(id)).clear();
         getDriver().findElement(By.id(id)).sendKeys(value);
     }
+   
     public void buttonClickByLabel(String label){
         getDriver().findElement(By.xpath("//button[.=\'"+label+"\']")).click();
     }

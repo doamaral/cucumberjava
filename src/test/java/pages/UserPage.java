@@ -12,5 +12,10 @@ public class UserPage extends BasePage{
         getDriver().findElement(By.linkText("Adicionar")).click();
         return new AddAccountPage();
     }
+	public ListAccountsPage selectListAccountsMenu(){
+		getDriver().findElement(By.xpath("//*[.=\"Contas \"]")).click();
+        getDriver().findElement(By.linkText("Listar")).click();
+        return new ListAccountsPage();
+    }
 	
 }

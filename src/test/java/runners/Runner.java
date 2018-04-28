@@ -8,9 +8,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		plugin = {"pretty", "html:target/cucumber_reports"},
-		features = "src/test/resources/features",
-		//features = "src/test/resources/features/account.feature",
-		//tags = {"@Ready"}, 
+		//features = "src/test/resources/features",
+		features = "src/test/resources/features/account.feature",
+		tags = {"@Ready"}, 
 		//if have more tags, separate with comma
 		//@Ready @InProgress
 		glue = "steps",
