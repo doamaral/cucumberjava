@@ -1,25 +1,26 @@
 package runners;
+import io.cucumber.core.snippets.SnippetType;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 
 import static core.DriverFactory.getDriver;
-import cucumber.api.CucumberOptions;
-import cucumber.api.SnippetType;
-import cucumber.api.junit.Cucumber;
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		plugin = {"pretty", "html:target/cucumber_reports"},
 		//features = "src/test/resources/features",
 		features = "src/test/resources/features/account.feature",
-		tags = {"@Ready"}, 
+		tags = "@Ready",
 		//if have more tags, separate with comma
 		//{"@InProgress, @Ready"}
 		glue = "steps",
 		//dryRun = true,
 		monochrome = true,
-		snippets = SnippetType.CAMELCASE
+		snippets = CucumberOptions.SnippetType.CAMELCASE
 	)
 public class Runner {
 	@BeforeClass

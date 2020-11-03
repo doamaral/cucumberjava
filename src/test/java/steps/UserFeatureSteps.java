@@ -1,11 +1,12 @@
 package steps;
 
-import cucumber.api.java.en.*;
+
+import io.cucumber.java.en.*;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import pages.LoginPage;
-import pages.UserPage;
 import pages.NewUserPage;
-import org.apache.commons.lang3.RandomStringUtils;
+import pages.UserPage;
 
 public class UserFeatureSteps {
 	LoginPage loginPage = new LoginPage();

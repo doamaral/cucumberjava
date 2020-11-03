@@ -1,11 +1,10 @@
 package steps;
 
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import static core.DriverFactory.getDriver;
 
 import core.DriverFactory;
 import core.Properties;
+import io.cucumber.java.*;
 
 public class Hooks {
 	

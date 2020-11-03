@@ -2,7 +2,7 @@ package steps;
 
 import static core.DriverFactory.getDriver;
 
-import cucumber.api.java.en.*;
+import io.cucumber.java.en.*;
 import pages.LoginPage;
 import pages.UserPage;
 import pages.AddAccountPage;

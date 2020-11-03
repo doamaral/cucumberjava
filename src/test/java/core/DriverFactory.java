@@ -14,7 +14,7 @@ public class DriverFactory {
 		if(driver == null) {
 			switch (Properties.BROWSER) {
 				case FIREFOX:
-					System.setProperty("webdriver.gecko.driver", "C:\\Users\\user\\webdrivers\\geckodriver.exe");
+					System.setProperty("webdriver.gecko.driver", "C:\\Users\\SouthSystem\\webdrivers\\geckodriver.exe");
 					driver = new FirefoxDriver();
 					break;
 				case CHROME:
